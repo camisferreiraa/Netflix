@@ -20,14 +20,14 @@ function Login() {
             }}>
                 <div className="login-container" style={{zIndex: 1}}>
                     <div className='header'>
-                        <Link to='/Home'><img src={logo} alt="logo da netflix" className='logo'  /></Link>
+                        <Link to='/landingpage'><img src={logo} alt="logo da netflix" className='logo'  /></Link>
                     </div>
-                    <section className="login-content">
+                     <section className="login-content">
                         <h1>Entrar</h1>
                         <form>
                             <input type="text" name="login" id="login" placeholder="Email ou número de celular" className='login-input' />
                             <input type="password" name="password" id="senha" placeholder="Senha" className='login-input' />
-                            <button type="submit">Entrar</button>
+                            <button type="button"><Link to="/home">Entrar</Link></button>
                         </form>
                         <p>ou</p>
                         <button className='helper-button'>Usar código de acesso</button>

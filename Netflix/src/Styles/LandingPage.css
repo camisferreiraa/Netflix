@@ -1,0 +1,36 @@
+img {
+    width: 150px;
+    margin-left:10% ;
+}
+
+.text_box{
+    width: 40%;
+    
+}
+
+h3, p {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.submit_email{
+
+}
+.submit_email input {
+    padding: 20px;
+    border: 1px solid rgb(104, 104, 104);
+    background-color: rgba(0, 0, 0, 0.515);
+    color: #fff;
+    width: 400px;
+    border-radius: 6px;
+}
+.submit_email button {
+    color: #fff;
+    background-color: red;
+    padding: 20px 50px ;
+    font-weight: 700;
+    font-size: 24px;
+}
