@@ -1,0 +1,44 @@
+
+.banners, .catalog {
+    display: flex;
+    flex-direction: row;
+
+    
+}
+  
+  .banner, .catalog-item {
+    margin: 10px;
+  }
+  
+  .banner img {
+    border-radius: 5px;
+    
+  }
+
+.catalog-item img {
+    width: 500px;
+}
+.catalog {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+ }
+.catalog h3 {
+    font-size: 18px;
+    color: white;
+}
+
+.catalog-item {
+    background-color: rgb(32, 30, 30);
+    padding: 0.5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

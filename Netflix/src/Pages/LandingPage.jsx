@@ -4,6 +4,11 @@ import backgroundImage from '../Images/backgroundnetflix.jpg';
 import popcorn from '../Images/popcorn-svgrepo-com.svg';
 import '../Styles/LandingPage.css'
 import Footer from '../Components/Rodape'
+import tv from '../Images/tv.png'
+import device from '../Images/device-pile.png'
+import infantil from '../Images/Infantil.png'
+import mobilepng from '../Images/mobile-stranger things.jpg'
+import Accordion from '../Components/Accordion';
 
 
 
@@ -53,6 +58,7 @@ align-items: center;
 justify-content: space-around;
 border-radius: 10px;
 
+
 background: rgb(201,4,171);
 background: radial-gradient(circle, rgba(201,4,171,1) 24%, rgba(82,34,255,1) 80%, rgba(10,12,53,1) 95%);
 `
@@ -91,6 +97,45 @@ function LandingPage (){
             </div>
         </Box>
         </Container>
+        <div className="banner_information">
+            <div className="texts">
+                <h2>Aproveite na TV</h2>
+                <p>Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</p>
+            </div>
+            <img src={tv} alt="" />
+        </div>
+        <div className="banner_information" style={{
+            flexDirection: 'row-reverse'
+        }}>
+            <div className="texts">
+                <h2>Assista onde quiser</h2>
+                <p>Assista a quantos filmes e séries quiser no celular, tablet, laptop e TV.</p>
+            </div>
+            <img src={device} alt="" />
+        </div>
+        <div className="banner_information">
+            <div className="texts">
+                <h2>Crie perfis para crianças</h2>
+                <p>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.</p>
+            </div>
+            <img src={infantil} alt="" />
+        </div>
+        <div className="banner_information" style={{
+            flexDirection: 'row-reverse'
+        }}>
+            <div className="texts">
+                <h2>Baixe séries para assistir offline</h2>
+                <p>Assista em um avião, trem ou submarino...</p>
+            </div>
+            <img src={mobilepng} alt="" />
+        </div>
+
+        
+        <div className="ask">
+            <h1>Perguntas Frequentes</h1>
+            <Accordion/>
+        </div>
+
         <Footer/>
     </>
     )

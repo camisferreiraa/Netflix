@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import logo from '../Images/netflix-logo-png-2583.png'
-import { CiSearch } from "react-icons/ci";
 import { IoIosNotifications } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { FaSearch } from "react-icons/fa";
+import photo from '../Images/profile-avatar-account-icon-16699.svg'
 
 
 
@@ -25,40 +26,77 @@ justify-content: space-between;
 `
 const Ul = styled.ul `
 display: flex;
-gap: 20px;
+gap: 25px;
 padding: 16px;
 
 `
 const Li = styled.li `
 list-style: none;
+font-weight: 500;
 color: white;
+text-transform: uppercase;
 font-size: 20px;
+overflow: hidden;
 `
 const Menager = styled.div`
+display: flex;
+flex-direction: row;
+gap: 10px;
 `
 const Profile = styled.div `
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 15px;
 `
+const Button = styled.button `
+background-color: transparent;
+text-align: center;
+color: #fff;
+font-size: 18px;
+padding: 6px;
+border: none;
+
+`
+const Photo = styled.img `
+width: 40px;
+`
+
+const H4 = styled.h4 `
+color: #fff;
+`
+const Span = styled.span `
+`
+
+
 
 function NavBar (){
     return (
-    
+
         <Header>
             <Img src={logo} alt="logo netflix" />
-            <Nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <Nav >
               <Ul>
-                <Li className="nav-item active">Home</Li>
-                <Li className="nav-item active">TV Shows</Li>
-                <Li className="nav-item active">Movies</Li>
+                <Li >Home</Li>
+                <Li >TV Shows</Li>
+                <Li >Movies</Li>
               </Ul>
             </Nav>
             <Menager>
-            <button><CiSearch size={30}/></button>
-            <button><FaHeart size={30}/>My List</button>
-            <button><IoIosNotifications size={30}/></button>
+            <Button><FaSearch color='#fff' size={30}/></Button>
+            <Button style={{ 
+                              display: 'flex', 
+                              alignItems: 'center', 
+                              justifyContent: 'center', 
+                              gap: '8px', 
+                              padding: '10px 20px',
+                              fontSize: '16px' }}>
+            <FaHeart color='#fff' size={30}/>My List</Button>
+            <Button><IoIosNotifications color='#fff' size={30}/></Button>
             <Profile>
-                <img src="" alt="" />
-                <span>Camilly</span>
-                <span><IoMdArrowDropdown size={30}/></span>
+                <Photo src={photo} alt="" />
+                <H4>Camilly</H4>
+                <Span><IoMdArrowDropdown color='#fff' size={30}/></Span>
             </Profile>
             </Menager>
         </Header>
