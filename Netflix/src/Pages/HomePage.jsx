@@ -3,6 +3,12 @@ import { useEffect, useState } from 'react';
 import { api } from '../api';
 import NavBar from '../Components/NavBar'
 import '../Styles/HomePage.css'
+import { FaPlay } from "react-icons/fa6";
+import { FaCaretRight } from "react-icons/fa6";
+import { FaCaretLeft } from "react-icons/fa6";
+import Footer from '../Components/Rodape';
+
+
 
 const Container = styled.div `
 background-color: black;
@@ -17,7 +23,7 @@ function Home (){
     const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    // Buscar banners
+
     api.get('/movie/popular')
       .then(response => {
         setBanners(response.data.results);
@@ -26,7 +32,7 @@ function Home (){
         console.error('Erro ao buscar banners:', error);
       });
 
-    // Buscar catálogo
+    
     api.get('/movie/now_playing')
       .then(response => {
         setCatalog(response.data.results);
@@ -53,27 +59,33 @@ function Home (){
     <NavBar/>
 
     <div >
-      
-
-      <h1>Banner de Filmes</h1>
       {banners.length > 0 && (
         <div className="banner-container">
-          <button className="nav-button" onClick={prevBanner}>{"<"}</button>
+
           <div className="banner">
-            <img
-              src={`https://image.tmdb.org/t/p/original${banners[currentIndex].backdrop_path}`}
-              alt={banners[currentIndex].title}
-              style={{ width: '100%', height: '100%' }}
-            />
-            <h2>{banners[currentIndex].title}</h2>
+
+          
+              <button className="prev-button" onClick={prevBanner}><FaCaretLeft/></button>
+                <img
+                  src={`https://image.tmdb.org/t/p/original${banners[currentIndex].backdrop_path}`}
+                  alt={banners[currentIndex].title}
+                  style={{ width: '100%', height: '100%',  margin: 0}}
+                />
+                <button className="play-button">
+                <FaPlay/> Play
+                </button>
+                <h2>{banners[currentIndex].title}</h2>
+                <p>{banners.desc}</p>
+                <button className="next-button" onClick={nextBanner}><FaCaretRight/></button>
+              
           </div>
-          <button className="nav-button" onClick={nextBanner}>{">"}</button>
+          
         </div>
       )}
 
       
       <section className="bestfilms">
-        <h1>Os Melhores Filmes</h1>
+        <h1>Popular on Netflix</h1>
           <div className="catalog">
             {catalog.map(movie => (
               <div key={movie.id} className="catalog-item">
@@ -82,13 +94,16 @@ function Home (){
                   alt={movie.title}
                   style={{ width: '400px' }}
                 />
-                <h3>{movie.title}</h3>
+                <div className='box-play'>
+                    <h3>{movie.title}</h3>
+                    <button className='play-btn'><FaPlay/></button>
+                </div> 
               </div>
             ))}
           </div>
       </section>
     </div>
-
+        <Footer/>
         </Container>
 </>
     )
