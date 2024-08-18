@@ -27,7 +27,11 @@ function Login() {
                         <form>
                             <input type="text" name="login" id="login" placeholder="Email ou número de celular" className='login-input' />
                             <input type="password" name="password" id="senha" placeholder="Senha" className='login-input' />
-                            <button type="button"><Link to="/home">Entrar</Link></button>
+                            <button className='btn-enter' type="button"><Link style={{
+                                color: 'white',
+                                textDecoration: 'none',
+                                fontWeight: '600'
+                            }} to="/home">Entrar</Link></button>
                         </form>
                         <p>ou</p>
                         <button className='helper-button'>Usar código de acesso</button>

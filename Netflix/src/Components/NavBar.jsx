@@ -5,6 +5,7 @@ import { FaHeart } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import photo from '../Images/profile-avatar-account-icon-16699.svg'
+import { Link } from 'react-router-dom';
 
 
 
@@ -74,7 +75,7 @@ function NavBar (){
     return (
 
         <Header>
-            <Img src={logo} alt="logo netflix" />
+            <Link to='/'><Img src={logo} alt="logo netflix" /></Link>
             <Nav >
               <Ul>
                 <Li >Home</Li>
