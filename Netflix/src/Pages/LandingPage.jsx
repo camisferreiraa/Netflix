@@ -99,7 +99,7 @@ function LandingPage (){
         </Container>
         <div className="banner_information">
             <div className="texts">
-                <h2>Aproveite na TV</h2>
+               
                 <p>Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</p>
             </div>
             <img src={tv} alt="" />
@@ -108,14 +108,14 @@ function LandingPage (){
             flexDirection: 'row-reverse'
         }}>
             <div className="texts">
-                <h2>Assista onde quiser</h2>
+                
                 <p>Assista a quantos filmes e séries quiser no celular, tablet, laptop e TV.</p>
             </div>
             <img src={device} alt="" />
         </div>
         <div className="banner_information">
             <div className="texts">
-                <h2>Crie perfis para crianças</h2>
+                
                 <p>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.</p>
             </div>
             <img src={infantil} alt="" />
@@ -124,7 +124,7 @@ function LandingPage (){
             flexDirection: 'row-reverse'
         }}>
             <div className="texts">
-                <h2>Baixe séries para assistir offline</h2>
+                
                 <p>Assista em um avião, trem ou submarino...</p>
             </div>
             <img src={mobilepng} alt="" />
