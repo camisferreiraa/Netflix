@@ -59,7 +59,7 @@ function Home (){
     <Container>
     <NavBar/>
 
-    <div >
+    <div className='hero-container' >
       {banners.length > 0 && (
         <div className="banner-container">
 
@@ -93,7 +93,6 @@ function Home (){
                 <img
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt={movie.title}
-                  style={{ width: '400px' }}
                 />
                 <div className='box-play'>
                     <h3>{movie.title}</h3>
